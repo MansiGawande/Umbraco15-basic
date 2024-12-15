@@ -1,0 +1,28 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = null;
+}
+@* <!DOCTYPE html> *@
+<html>
+
+<head>
+    <title>@Model.Name</title>
+    <base href="@Url.Content("~/")">
+    <title>@Model.Name</title>
+    <meta name="mobile-web-app-capable" content="yes">
+    @* <link rel="stylesheet" href="@Url.Content("~/css/styles.css")"> *@
+    @section Head {
+
+    <link href="~/css/styles.css" asp-append-version="true" rel="stylesheet" type="text/css" />
+    }
+</head>
+<body>
+    <h1>@Model.Value("productName")</h1>
+    <p>Price: @Model.Value("price")</p>
+    <div>@Model.Value("description")</div>
+     <img src="@Model.Value("productImage")" alt="Product Image" /> 
+   
+
+</body>
+</html>
